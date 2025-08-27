@@ -1,38 +1,249 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+.app-container {
+  width: 1280px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 97px;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 40px;
+}
+
+.shop-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.search-container {
+  width: 280px;
+  height: 72px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  width: 248px;
+  height: 48px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+.search-icon {
+  width: 40px;
+  height: 48px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #F2E8E8;
+  color: #964F52;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  padding-left: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-input-container {
+  flex: 1;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  background: #F2E8E8;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-input {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  font-family: Plus Jakarta Sans, sans-serif;
+  height: 100%;
+  width: 100%;
+  padding: 8px 16px;
+
+  background: transparent !important;
+  color: #964F52 !important;
+}
+
+.search-input:focus,
+.search-input:active {
+  background: transparent !important;
+  color: #964F52 !important;
+  box-shadow: none !important;
+}
+
+.search-input::placeholder {
+  color: #964F52 !important;
+  opacity: 1;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 136px;
+  height: 23px;
+}
+
+.logo-icon-container {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  width: 16px;
+  height: 16px;
+  background: #1C0D0F;
+  border-radius: 2px;
+}
+
+.logo-text {
+  width: 104px;
+  height: 23px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0;
+  color: #1C0D0F;
+}
+
+.content-container {
+  width: 1280px;
+  padding: 20px 160px;
+  opacity: 1;
+}
+
+.products-container {
+  width: 960px;
+  max-width: 960px;
+  opacity: 1;
+  margin-bottom: 40px;
+}
+
+.section-header-container {
+  width: 960px;
+  height: 60px;
+  padding: 20px 16px 12px 16px;
+  opacity: 1;
+}
+
+.section-title {
+  width: 928px;
+  height: 28px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #1C0D0F;
+  margin: 0;
+}
+
+.product-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 960px;
+  padding: 16px 0 0 0;
+  opacity: 1;
+  height: auto;
+  min-height: 176px;
+}
+
+.product-card-container {
+  width: 176px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-image-container {
+  width: 176px;
+  height: 245px;
+  padding-bottom: 12px;
+  border: 0 !important;
+}
+
+.product-image {
+  width: 176px;
+  height: 176px;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.product-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 176px;
+  height: 45px;
+}
+
+.product-name-container {
+  width: 176px;
+  height: 24px;
+  overflow: hidden;
+}
+
+.product-name {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #1C0D0F;
+}
+
+.product-price-container {
+  margin-top: auto;
+  width: 176px;
+  height: 21px;
+}
+
+.product-price {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0;
+  color: #964F52;
+}
+
+.no-products {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #1C0D0F;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
 }

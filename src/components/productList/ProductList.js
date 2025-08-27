@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import {
-  Spinner, Alert, Row, Col, Container, Card,
+  Spinner, Alert, Row, Col, Card,
 } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import fetchProducts from '../../api/products';
@@ -41,7 +41,7 @@ function ProductList({ search = '' }) {
   const formatCategory = (category) => category.charAt(0).toUpperCase() + category.slice(1).toLowerCase();
 
   return (
-    <Container className="content-container">
+    <div className="content-container">
       {Object.keys(grouped).map((category) => (
         <div key={category} className="products-container">
           <div className="section-header-container">
@@ -75,7 +75,7 @@ function ProductList({ search = '' }) {
           </Row>
         </div>
       ))}
-    </Container>
+    </div>
   );
 }
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { Container, Image, Navbar } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import ProductList from './components/productList/ProductList';
 import SearchBar from './components/search/SearchBar';
 import logo from './assets/img/logo.png';
@@ -12,8 +12,8 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Container className="app-container">
-        <Navbar className="header">
+      <div className="app-container">
+        <div className="header">
           <div className="logo-container">
             <div className="logo-icon-container">
               <Image src={logo} alt="logo" />
@@ -24,11 +24,11 @@ function App() {
           <div className="search-container">
             <SearchBar search={search} setSearch={setSearch} />
           </div>
-        </Navbar>
+        </div>
         <main>
           <ProductList search={search} />
         </main>
-      </Container>
+      </div>
     </QueryClientProvider>
   );
 }
